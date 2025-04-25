@@ -1,7 +1,7 @@
 FROM mcr.microsoft.com/devcontainers/typescript-node:0-20 as build
 
 WORKDIR /app
-COPY website/package.json package-lock.json ./
+COPY website/package.json website/package-lock.json ./
 RUN npm install
 COPY website .
 RUN npm run build
